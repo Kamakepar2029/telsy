@@ -35,8 +35,42 @@ if ($_GET['page'] && $_GET['page'] != '/'){
     flex-grow: 1;
 }</style>`;
 				}
+				if ($_GET['page'] == '/catalog/Primeri-proektov/'){
+					trytoget+=`<style>.MsoTableGrid {
+    margin-bottom: 40px;
+}
+
+.MsoTableGrid td {
+    border: none !important;
+}
+
+.MsoTableGrid {
+    width: 100% !important;
+}
+
+.MsoTableGrid tbody tr {
+    display: flex;
+    overflow: auto;
+    border: 2px solid lightgray;
+    height: max-content !important;
+    width: 100% !important;
+}
+
+.content > table > tbody > tr > td > .MsoNormal {
+    display: none;
+}
+
+td .MsoNormal {
+    max-width: 125px !important;
+    width: 100% !important;
+}
+
+.MsoTableGrid > tbody > tr > td {
+    width: calc(100% - 100px) !important;
+}</style>`;
+				}
         document.getElementsByClassName('content')[0].style= '';
-        document.getElementsByClassName('content')[0].innerHTML = trytoget.replaceAll('"/', '"/?page=/').replaceAll('/?page=/img/', '/assets/images/').replaceAll('/?page=/design/telsi_shop/img/st.gif', '/assets/images/logo.png');
+        document.getElementsByClassName('content')[0].innerHTML = trytoget.replaceAll('"/', '"/?page=/').replaceAll('/?page=/img/', '/assets/images/').replaceAll('/?page=/design/telsi_shop/img/st.gif', '/assets/images/logo.png').replaceAll('http://telsi.ru/', '/?page=/');
     }
 }else{
     let contents = `<div class="content__ur_otdel">

@@ -237,47 +237,16 @@ body {
         left: 100px !important;
     }
 }
-.content a{
-    text-decoration: none;
-}
-.content span {
-    text-decoration: none !important;
-}
-.MsoTableGrid {
-    margin-bottom: 40px;
-}
-
-.MsoTableGrid td {
-    border: none !important;
-}
-
-.MsoTableGrid {
-    width: 100% !important;
-}
-
-.MsoTableGrid tbody tr {
-    display: flex;
-    overflow: auto;
-    border: 2px solid lightgray;
-    height: max-content !important;
-    width: 100% !important;
-}
 
 .contacts a:hover {
     color: red;
 }
 
-.content > table > tbody > tr > td > .MsoNormal {
-    display: none;
+.content a{
+    text-decoration: none;
 }
-
-td .MsoNormal {
-    max-width: 125px !important;
-    width: 100% !important;
-}
-
-.MsoTableGrid > tbody > tr > td {
-    width: calc(100% - 100px) !important;
+.content span {
+    text-decoration: none !important;
 }
 
 img.stImg {
