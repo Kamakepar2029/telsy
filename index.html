@@ -406,14 +406,61 @@ if ($_GET['page'] && $_GET['page'] != '/'){
         C оглавления каталога осуществляется автоматический переход на тематические сайты, на которых представлена подробная информация по всему перечню оборудования входящему в выше перечисленные системы. Сервис тематических сайтов дает возможность заказа оборудования, в том числе, с доставкой по России, выложена соответствующая эксплуатационная и нормативная документация, сертификаты, руководства по проектированию, примеры проектов, тематические статьи.
     </div>
     <div class="content__contacts_redirects">
+				<style>
+				.block a {
+    height: 140px;
+    width: 100%;
+    color: black;
+    display: flex;
+    border: 1px solid lightgray;
+    margin-top: 11px;
+    text-align: center;
+    padding: 10px 35px;
+    align-items: center;
+    justify-content: center;
+}
+
+.block > a > img {
+    width: 50px;
+    margin-right: 56px;
+}
+
+.block > a > .show_text {
+    display: none;
+}
+
+.block a:hover {
+    color: black;
+}
+
+.block a:hover img {
+    display: none;
+}
+
+.block a:hover .out_text {
+    display: none;
+}
+
+a {}
+
+.block a:hover .show_text {
+    display: block;
+}
+				</style>
         <div class="content__contacts__redirects__title">Информационная поддержка клиентов</div>
-        <p>Официальный сайт компании <a href="http://www.telsi.ru">www.telsi.ru</a></p>
-        <p>Тематический сайт компании, посвященный оборудованию профессиональных систем вызова персонала и систем вызова пациентов торговой марки HOSTCALL <a href="http://www.hostcall.ru">www.hostcall.ru</a></p>
-        <p>Тематический сайт компании, посвященный оборудованию специализированных систем диспетчерской связи и переговорных устройств торговой марки GETCALL <a href="http://www.getcall.ru">www.getcall.ru</a></p>
-        <p>Тематический сайт компании, посвященный оборудованию по программе ДОСТУПНАЯ СРЕДА <a href="http://www.multicall.ru">www.multicall.ru</a></p>
-        <p>Тематический сайт компании посвященный системам оперативно-диспетчерской связи “Регион”; системам производственной связи, кроссовому оборудованию, кабелям связи и целому ряду дополнительного оборудования <a href="http://www.service-ats.ru">www.service-ats.ru</a></p>
-        <p>Тематический сайт компании, посвященный системам громкого оповещения торговой марки "INTER-M" <a href="http://www.inter-m.name">www.inter-m.name</a></p>
-        <p>Тематический сайт компании, в основном посвященный техническим решениям вызова персонала в гостиницах и других средствах размещения  <a href="http://www.sks-security.ru">www.sks-security.ru</a></p>
+        <div class="block"><a href="http://www.telsi.ru"><img src="/assets/images/logo.png"><div class="out_text">ООО СКБ ТЕЛСИ</div><div class="show_text">Официальный сайт компании</div></a></div>
+
+				<div class="block"><a href="http://www.hostcall.ru"><img src="/assets/images/hostcall.ico"><div class="out_text">HOSTCALL</div><div class="show_text">Тематический сайт компании, посвященный оборудованию профессиональных систем вызова персонала и систем вызова пациентов торговой марки HOSTCALL</div></a></div>
+    
+				<div class="block"><a href="http://www.getcall.ru"><img src="/assets/images/getcall.png"><div class="out_text">GETCALL</div><div class="show_text">Тематический сайт компании, посвященный оборудованию специализированных систем диспетчерской связи и переговорных устройств торговой марки GETCALL</div></a></div>
+
+				<div class="block"><a href="http://www.multicall.ru"><img src="/assets/images/multicall.gif"><div class="out_text">Multicall</div><div class="show_text">Тематический сайт компании, посвященный оборудованию по программе ДОСТУПНАЯ СРЕДА</div></a></div>
+
+				<div class="block"><a href="http://www.service-ats.ru"><img src="/assets/images/service-ats.png"><div class="out_text">Регион</div><div class="show_text">Тематический сайт компании посвященный системам оперативно-диспетчерской связи “Регион”</div></a></div>
+
+				<div class="block"><a href="http://www.inter-m.name"><img src="/assets/images/inter-m.png"><div class="out_text">INTER-M</div><div class="show_text">Тематический сайт компании, посвященный системам громкого оповещения торговой марки "INTER-M"</div></a></div>
+
+				<div class="block"><a href="http://www.sks-security.ru"><img src="/assets/images/sks-sec.png"><div class="out_text">SKS Security</div><div class="show_text">Тематический сайт компании, в основном посвященный техническим решениям вызова персонала в гостиницах и других средствах размещения</div></a></div>
     </div>`;
     document.getElementsByClassName('content')[0].style= '';
     document.getElementsByClassName('content')[0].innerHTML = contents;
