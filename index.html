@@ -273,6 +273,10 @@ body {
     width: 100% !important;
 }
 
+.contacts a:hover {
+    color: red;
+}
+
 .content > table > tbody > tr > td > .MsoNormal {
     display: none;
 }
@@ -284,6 +288,10 @@ td .MsoNormal {
 
 .MsoTableGrid > tbody > tr > td {
     width: calc(100% - 100px) !important;
+}
+
+img.stImg {
+    height: 24px;
 }
     </style>
 </head>
@@ -365,7 +373,7 @@ if ($_GET['page'] && $_GET['page'] != '/'){
     let trytoget = get_answer('https://resources.xn--e1agiyc.com/get_content.php?page='+$_GET['page']);
     if (trytoget){
         document.getElementsByClassName('content')[0].style= '';
-        document.getElementsByClassName('content')[0].innerHTML = trytoget.replaceAll('"/', '"/?page=/').replaceAll('/?page=/img/', '/assets/images/');
+        document.getElementsByClassName('content')[0].innerHTML = trytoget.replaceAll('"/', '"/?page=/').replaceAll('/?page=/img/', '/assets/images/').replaceAll('/?page=/design/telsi_shop/img/st.gif', '/assets/images/logo.png');
     }
 }else{
     let contents = `<div class="content__ur_otdel">
