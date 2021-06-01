@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Телси</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        * {
+          margin: 0;
+          padding: 0;
+          border: 0 none;
+          background: none;
+        }
+        body {
+          font-family: 'Roboto', sans-serif;
+          font-weight: normal;
+        }
+        .logo{
+            display:block;
+            width:60px;
+            height:60px;
+            background-image: url('/assets/images/logo.png');
+        }
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic);
+*{box-sizing: border-box;}
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+nav {background: #413F3C;padding-left: 20px;padding-right: 20px;}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+nav a {
+  text-decoration: none;
+  display: block;
+  transition: .3s linear;
+}
+.topmenu > li {
+  float: left;
+  position: relative;
+  border-left: 1px solid black;
+}
+.topmenu > li:first-child {border-left: 0;}
+.topmenu > li > a {  
+  padding: 20px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #FEFDFD;
+  letter-spacing: 2px;
+}
+.topmenu > li > a.active, 
+.submenu a:hover {color: lightblue;}
+.topmenu .fa, 
+.submenu .fa {
+  margin-left: 5px;
+  color: inherit;
+}
+.submenu {
+  position: absolute;
+  z-index: 5;
+  min-width: 200px;
+  background: white;
+  border-top: 1px solid #CBCBCC;
+  border-left: 1px solid #CBCBCC;
+  border-right: 1px solid #CBCBCC;
+  visibility: hidden;
+  opacity: 0; 
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+  transition: .3s linear;  
+}
+.submenu li {position: relative;}
+.submenu li a {
+  color: #282828;
+  padding: 10px 20px;
+  font-size: 13px;
+  border-bottom: 1px solid #CBCBCC;
+}
+.submenu .submenu {
+  position: absolute;
+  left: 100%;
+  top: -1px;
+  transition: .3s linear;
+}
+nav li:hover > .submenu {
+  transform: rotateX(0deg);
+  visibility: visible;
+  opacity: 1;
+}
+@keyframes slide-out-background{
+    from{
+        background-position-x:0px;
+    }
+    to{
+        background-position-x:1000px;   
+    }
+}
+
+.header {
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-around;
+}
+
+.content a {
+    color: #053f6c;
+}
+
+.content a:hover {
+    color: red;
+}
+
+form {
+    display: none;
+}
+
+.logo {
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: 50% 50%;
+    border: 2px solid #6c9dc2;
+    border-radius: 50%;
+}
+
+body {
+}
+
+.contacts {
+    margin-right: 21px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contacts a {
+    color: #053f6c;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.emailbtn {}
+
+.btn {
+    display: flex;
+    text-decoration: none;
+    color: #053f6c;
+    border: 3px solid #053f6c;
+    width: max-content;
+    padding: 10px 94px;
+    margin-top: 2px;
+    border-radius: 5px;
+}
+
+.topmenu > li > a.active, .submenu a:hover {
+    color: lightblue;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, white 25%, lightblue 0, lightblue 50%, white 0, white 75%, lightblue 0);
+    background-size: 30px 30px;
+    animation: 10s slide-out-background infinite;
+}
+.content__ur_otdel {
+    white-space: break-spaces;
+}
+
+.content {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 16px;
+}
+
+.content__contacts_redirects {
+    margin-bottom: 10px;
+    background: #f7f7f7;
+    border: 1px solid lightgray;
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content__contacts__redirects__title {
+    border: 1px solid lightgray;
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.content__contacts_redirects p {
+    margin-top: 14px;
+}
+
+.content__contacts_redirects > p > a {
+    color: #053f6c;
+}
+
+.content__contacts_redirects > p > a:hover {
+    color: red;
+}
+
+.btn {
+    padding: 4px 94px !important;
+    margin-bottom: 4px !important;
+}
+@media screen and (max-width: 600px) {
+    .header{
+        flex-direction:column;
+        padding-left:10px;
+        padding-right:10px;
+    }
+    nav{
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .content{
+        padding-left:3px;
+        padding-right:0px;
+    }
+    .btn{
+        width:100%;
+    }
+    .contacts a{
+        width:100%;
+        text-align:center;
+    }
+    .submenu .submenu{
+        left: 100px !important;
+    }
+}
+.content a{
+    text-decoration: none;
+}
+.content span {
+    text-decoration: none !important;
+}
+.MsoTableGrid {
+    margin-bottom: 40px;
+}
+
+.MsoTableGrid td {
+    border: none !important;
+}
+
+.MsoTableGrid {
+    width: 100% !important;
+}
+
+.MsoTableGrid tbody tr {
+    display: flex;
+    overflow: auto;
+    border: 2px solid lightgray;
+    height: max-content !important;
+    width: 100% !important;
+}
+
+.content > table > tbody > tr > td > .MsoNormal {
+    display: none;
+}
+
+td .MsoNormal {
+    max-width: 125px !important;
+    width: 100% !important;
+}
+
+.MsoTableGrid > tbody > tr > td {
+    width: calc(100% - 100px) !important;
+}
+    </style>
+</head>
+<body>
+    <div class="header" id="header">
+        <div class="logo" onclick="document.location.href='/';"></div><div class="contacts"><a href="tel:8 (945) 120 - 48 - 88">8 (945) 120 - 48 - 88</a></div><div class="emailbtn">По всем вопросам обращайтесь на info@telsi.ru<br><a class="btn" href="mailto:info@telsi.ru">Написать нам</a></div>
+    </div>
+    <nav>
+  <ul class="topmenu">
+    <li><a href="#" class="active">Каталог товаров<span class="fa fa-angle-down"></span></a>
+      <ul class="submenu">
+        <li><a href="/?page=/catalog/SISTEMI-VIZOVA-PERSONALA/">Системы вызова персонала</a><ul class="submenu">
+            <li><a href="/?page=/catalog/SISTEMI-VIZOVA-PERSONALA/Novaya-sistema-vizova-personala-HostCall-C/">Новая система вызова персонала HostCall-CMP</a></li>
+            <li><a href="/?page=/catalog/SISTEMI-VIZOVA-PERSONALA/Dlya-lechebnih-uchrezhdenij-s-razgovornim-/">Для лечебных учреждений с разговорным трактом и без HostCall-NM/NP</a></li>
+            <li><a href="/?page=/catalog/SISTEMI-VIZOVA-PERSONALA/Iz-pomeshheniya-tualeta-dlya-invalidov-HOS/">Из помещения туалета для инвалидов HOSTCALL-TM</a></li>    
+            <li><a href="/?page=/catalog/SISTEMI-VIZOVA-PERSONALA/Universalnie-dlya-obshhestvennih-zdanij-GE/">Универсальные для общественных зданий GETCALL PG-36M</a></li>   
+            <li><a href="/?page=/catalog/SISTEMI-VIZOVA-PERSONALA/Dlya-penitentsiarnih-uchrezhdenij-GETSALL-/">Для пенитенциарных учреждений «GETСALL GC-9036FC</a></li>
+        </ul>
+        </li>
+        <li><a href="/?page=/catalog/OBORUDOVANIE-PO-PROGRAMME-DOSTUPNAYA-SREDA/">Оборудование по программе доступная среда</a><ul class="submenu">
+            <li><a href="/?page=/catalog/OBORUDOVANIE-PO-PROGRAMME-DOSTUPNAYA-SREDA/Sistema-vizova-personala-iz-pomeshheniya-t/">Система вызова персонала из помещения туалета инвалидов “Hostcall-TM”</a></li>
+            <li><a href="/?page=/catalog/OBORUDOVANIE-PO-PROGRAMME-DOSTUPNAYA-SREDA/Sistema-vizova-personala-dlya-obshhestvenn/">Система вызова персонала для общественных зданий «GetCall PG-36M»</a></li>
+            <li><a href="/?page=/catalog/OBORUDOVANIE-PO-PROGRAMME-DOSTUPNAYA-SREDA/Radio-sistemi-vizova-pomoshhi-dlya-invalid/">Радио системы вызова помощи для инвалидов</a></li>
+            <li><a href="/?page=/catalog/OBORUDOVANIE-PO-PROGRAMME-DOSTUPNAYA-SREDA/Zvukovie-mayaki/">Звуковые маяки</a></li>
+            <li><a href="/?page=/catalog/OBORUDOVANIE-PO-PROGRAMME-DOSTUPNAYA-SREDA/Svetovie-mayaki/">Световые маяки</a></li>
+            <li><a href="/?page=/catalog/OBORUDOVANIE-PO-PROGRAMME-DOSTUPNAYA-SREDA/Informatsionnie-tablo-i-znaki-dostupnosti/">Информационные табло и знаки доступности</a></li>
+            <li><a href="/?page=/catalog/OBORUDOVANIE-PO-PROGRAMME-DOSTUPNAYA-SREDA/Dopolnitelnoe-oborudovanie/">Дополнительное оборудование</a></li>
+        </ul></li>
+        <li><a href="/?page=/catalog/SISTEMI-OPERATIVNOJ-DISPETCHERSKOJ-SVYAZI-/">Системы оперативной диспетчерской связи GetCall</a><ul class="submenu">
+            <li><a href="/?page=/catalog/SISTEMI-OPERATIVNOJ-DISPETCHERSKOJ-SVYAZI-/Sistema-liftovoj-dispetcherskoj-svyazi-Get/">Система лифтовой диспетчерской связи «GetCall-DLS»</a></li>
+            <li><a href="/?page=/catalog/SISTEMI-OPERATIVNOJ-DISPETCHERSKOJ-SVYAZI-/Sistema-vizova-personala-dlya-obshhestvenn-44/">Система вызова персонала для общественных зданий «GetСall PG-36M»</a></li>
+            <li><a href="/?page=/catalog/SISTEMI-OPERATIVNOJ-DISPETCHERSKOJ-SVYAZI-/Sistema-vizova-personala-dlya-penitentsiar/">Система вызова персонала для пенитенциарных учреждений «GetСall GC-9036FC»</a></li>
+            <li><a href="/?page=/catalog/SISTEMI-OPERATIVNOJ-DISPETCHERSKOJ-SVYAZI-/Peregovornie-ustrojstva-dlya-meditsinskih-/">Переговорные устройства для медицинских учреждений</a></li>
+            <li><a href="/?page=/catalog/SISTEMI-OPERATIVNOJ-DISPETCHERSKOJ-SVYAZI-/Peregovornie-ustrojstva-obshhego-primeneni/">Переговорные устройства общего применения</a></li>
+            <li><a href="/?page=/catalog/SISTEMI-OPERATIVNOJ-DISPETCHERSKOJ-SVYAZI-/Proizvodstvennie-pulti/">Производственные пульты</a></li>
+            <li><a href="/?page=/catalog/SISTEMI-OPERATIVNOJ-DISPETCHERSKOJ-SVYAZI-/Abonentskie-ustrojstva/">Абонентские устройства</a></li>
+            <li><a href="/?page=/catalog/SISTEMI-OPERATIVNOJ-DISPETCHERSKOJ-SVYAZI-/Peregovornie-ustrojstva-dlya-penitentsiarn/">Переговорные устройства для пенитенциарных учреждений</a></li>
+        </ul></li>
+        <li><a href="/?page=/catalog/SISTEMA-OPERATIVNOJ-DISPETCHERSKOJ-SVYAZI-/">Система оперативной диспетчерской связи "Регион"</a><ul class="submenu">
+            <li><a href="/?page=/catalog/SISTEMA-OPERATIVNOJ-DISPETCHERSKOJ-SVYAZI-/Sistema-dispetcherskoj-svyaziRegion-120XT/">Система диспетчерской связи"Регион-120XT"</a></li>
+            <li><a href="/?page=/catalog/SISTEMA-OPERATIVNOJ-DISPETCHERSKOJ-SVYAZI-/Sistema-operativnoj-IP-svyazi-Region-DXE/">Система оперативной IP связи "Регион-DXE"</a></li>
+            <li><a href="/?page=/catalog/SISTEMA-OPERATIVNOJ-DISPETCHERSKOJ-SVYAZI-/Abonentskoe-oborudovanie/">Абонентское оборудование</a></li>
+        </ul></li>
+        <li><a href="/?page=/catalog/SISTEMI-VIZOVA-POSETITELEJ-V-KABINET/">Системы вызова посетителей в кабинет HostCall-CV</a></li>
+        <li><a href="/?page=/catalog/SISTEMI-NOCHNOGO-DEZHURNOGO-OSVESHHENIYA-H/">СИСТЕМЫ НОЧНОГО ДЕЖУРНОГО ОСВЕЩЕНИЯ «HostCall ®-LT»</a></li>
+        <li><a href="/?page=/catalog/Sistema-ojenki-kachestva-obsluzhivaniya-HostCall-QR/">СИСТЕМА ОЦЕНКИ КАЧЕСТВА ОБСЛУЖИВАНИЯ HostCall-QR</a></li>
+      </ul>
+    <li><a href="/?page=/catalog/Primeri-proektov/">Каталог проектов</a></li>
+    <li><a href="/?page=/content/advantages.html">Наши преимущества</a></li>
+    <li><a href="/?page=/content/about.html">О компании</a></li>
+    <li><a href="/?page=/content/contacts.html">Контакты</a></li>
+    <li><a href="/?page=/content/montag.html">Монтаж</a></li>
+    <li><a href="mailto:info@telsi.ru?subject=......:::::::ТЕЛСИ.COM::::............">Почта</a></li>
+  </ul>
+</nav>
+<div class="content" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+    <img src="/assets/images/loading.gif">
+</div>
+<script>
+    function get_answer(url){
+var xhr = new XMLHttpRequest();
+xhr.open('GET', url, false);
+xhr.send();
+if (xhr.status != 200) {
+return 'При загрузке произошла ошибка. Статус ошибки: '+String(xhr.status);
+} else {
+return( xhr.responseText );
+}
+}
+var parts = window.location.search.substr(1).split("&");
+var $_GET = {};
+for (var i = 0; i < parts.length; i++) {
+    var temp = parts[i].split("=");
+    $_GET[decodeURIComponent(temp[0])] = decodeURIComponent(temp[1]);
+}
+if ($_GET['page'] && $_GET['page'] != '/'){
+    document.getElementsByClassName('content')[0].style='display:flex;flex-direction:column;align-items:center;justify-content:center;';
+    document.getElementsByClassName('content')[0].innerHTML = '<img src="/assets/images/loading.gif">';
+    let trytoget = get_answer('https://resources.xn--e1agiyc.com/get_content.php?page='+$_GET['page']);
+    if (trytoget){
+        document.getElementsByClassName('content')[0].style= '';
+        document.getElementsByClassName('content')[0].innerHTML = trytoget.replaceAll('"/', '"/?page=/').replaceAll('/?page=/img/', '/assets/images/');
+    }
+}else{
+    let contents = `<div class="content__ur_otdel">
+        Настоящий сайт является головным сайтом нашей компании  и содержит оглавление каталога предлагаемого нами оборудования и текущие новости компании.
+        Представленное на сайте оборудование охватывает широкий перечень изделий, нашедших широкое применение на предприятиях и организациях самых разных секторов народного хозяйства нашей страны.
+        Прежде всего, на сайте широко представлены системы вызова персонала и системы вызова посетителей  торговой марки «HostCall», системы вызова персонала торговой марки «GetСall», и специализированные системы диспетчерской связи торговой марки «GetСall». Эти системы были разработаны специалистами нашей компании, и мы их серийно выпускаем. В каталог включено оборудование, разработанное нами для программы ДОСТУПНАЯ СРЕДА. Наряду с этим представлены и другие системы и средства связи и коммуникаций: диспетчерской связи торговой марки «Регион», системы точного времени. 
+    
+        C оглавления каталога осуществляется автоматический переход на тематические сайты, на которых представлена подробная информация по всему перечню оборудования входящему в выше перечисленные системы. Сервис тематических сайтов дает возможность заказа оборудования, в том числе, с доставкой по России, выложена соответствующая эксплуатационная и нормативная документация, сертификаты, руководства по проектированию, примеры проектов, тематические статьи.
+    </div>
+    <div class="content__contacts_redirects">
+        <div class="content__contacts__redirects__title">Информационная поддержка клиентов</div>
+        <p>Официальный сайт компании <a href="http://www.telsi.ru">www.telsi.ru</a></p>
+        <p>Тематический сайт компании, посвященный оборудованию профессиональных систем вызова персонала и систем вызова пациентов торговой марки HOSTCALL <a href="http://www.hostcall.ru">www.hostcall.ru</a></p>
+        <p>Тематический сайт компании, посвященный оборудованию специализированных систем диспетчерской связи и переговорных устройств торговой марки GETCALL <a href="http://www.getcall.ru">www.getcall.ru</a></p>
+        <p>Тематический сайт компании, посвященный оборудованию по программе ДОСТУПНАЯ СРЕДА <a href="http://www.multicall.ru">www.multicall.ru</a></p>
+        <p>Тематический сайт компании посвященный системам оперативно-диспетчерской связи “Регион”; системам производственной связи, кроссовому оборудованию, кабелям связи и целому ряду дополнительного оборудования <a href="http://www.service-ats.ru">www.service-ats.ru</a></p>
+        <p>Тематический сайт компании, посвященный системам громкого оповещения торговой марки "INTER-M" <a href="http://www.inter-m.name">www.inter-m.name</a></p>
+        <p>Тематический сайт компании, в основном посвященный техническим решениям вызова персонала в гостиницах и других средствах размещения  <a href="http://www.sks-security.ru">www.sks-security.ru</a></p>
+    </div>`;
+    document.getElementsByClassName('content')[0].style= '';
+    document.getElementsByClassName('content')[0].innerHTML = contents;
+}
+</script>
+</body>
+</html>
