@@ -147,8 +147,31 @@ td .MsoNormal {
     width: calc(100% - 100px) !important;
 }</style>`;
 				}
+				if ($_GET['page'] == '/content/about.html'){
+					let tuio = `<div class="content__contacts_redirects">
+        <div class="content__contacts__redirects__title">Информационная поддержка клиентов</div>
+				<div class="content_contacts_content">
+        <div class="block"><a href="http://www.telsi.ru"><img src="/assets/images/logo.png"><div class="out_text">ООО СКБ ТЕЛСИ</div><div class="show_text">Официальный сайт компании</div></a></div>
+
+				<div class="block"><a href="http://www.hostcall.ru"><img src="/assets/images/hostcall.png"><div class="out_text">HOSTCALL</div><div class="show_text">Тематический сайт компании, посвященный оборудованию профессиональных систем вызова персонала и систем вызова пациентов торговой марки HOSTCALL</div></a></div>
+    
+				<div class="block"><a href="http://www.getcall.ru"><img src="/assets/images/getcall.gif"><div class="out_text">GETCALL</div><div class="show_text">Тематический сайт компании, посвященный оборудованию специализированных систем диспетчерской связи и переговорных устройств торговой марки GETCALL</div></a></div>
+
+				<div class="block"><a href="http://www.multicall.ru"><img src="/assets/images/multicall.gif"><div class="out_text">Multicall</div><div class="show_text">Тематический сайт компании, посвященный оборудованию по программе ДОСТУПНАЯ СРЕДА</div></a></div>
+
+				<div class="block"><a href="http://www.service-ats.ru"><img src="/assets/images/service-ats.png"><div class="out_text">Регион</div><div class="show_text">Тематический сайт компании посвященный системам оперативно-диспетчерской связи “Регион”</div></a></div>
+
+				<div class="block"><a href="http://www.inter-m.name"><img src="/assets/images/inter-m.png"><div class="out_text">INTER-M</div><div class="show_text">Тематический сайт компании, посвященный системам громкого оповещения торговой марки "INTER-M"</div></a></div>
+
+				<div class="block"><a href="http://www.sks-security.ru"><img src="/assets/images/sks-sec.png"><div class="out_text">SKS Security</div><div class="show_text">Тематический сайт компании, в основном посвященный техническим решениям вызова персонала в гостиницах и других средствах размещения</div></a></div>
+				</div>
+    </div>`;
+				let first_part = trytoget.split('<p class="MsoNoSpacing"><strong><u>Информационная поддержка клиентов')[0];
+				let second_part = trytoget.split('</a> .</p>')[1];
+				trytoget = first_part+tuio+second_part;
+				}
         document.getElementsByClassName('content')[0].style= '';
-        document.getElementsByClassName('content')[0].innerHTML = trytoget.replaceAll('"/', '"/?page=/').replaceAll('/?page=/img/', '/assets/images/').replaceAll('/?page=/design/telsi_shop/img/st.gif', '/assets/images/logo.png').replaceAll('http://telsi.ru/', '/?page=/');
+        document.getElementsByClassName('content')[0].innerHTML = trytoget.replaceAll('"/', '"/?page=/').replaceAll('/?page=/img/', '/assets/images/').replaceAll('/?page=/design/telsi_shop/img/st.gif', '/assets/images/logo.png').replaceAll('http://telsi.ru/', '/?page=/').replaceAll('/?page=/assets/', '/assets/');
     }
 }else{
     let contents = `<div class="content__ur_otdel">
