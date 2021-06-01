@@ -374,6 +374,22 @@ if ($_GET['page'] && $_GET['page'] != '/'){
     document.getElementsByClassName('content')[0].innerHTML = '<img src="/assets/images/loading.gif">';
     let trytoget = get_answer('https://resources.xn--e1agiyc.com/get_content.php?page='+$_GET['page']);
     if (trytoget){
+				if ($_GET['page'] == '/content/'){
+					trytoget+=`<style>.content p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    border: 2px solid lightgray;
+    width: 100%;
+    padding: 11px 10px;
+    max-width: 400px;
+}
+
+.content h2 {
+    flex-grow: 1;
+}</style>`;
+				}
         document.getElementsByClassName('content')[0].style= '';
         document.getElementsByClassName('content')[0].innerHTML = trytoget.replaceAll('"/', '"/?page=/').replaceAll('/?page=/img/', '/assets/images/').replaceAll('/?page=/design/telsi_shop/img/st.gif', '/assets/images/logo.png');
     }
