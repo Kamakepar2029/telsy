@@ -164,7 +164,15 @@ if ($_GET['page'] && $_GET['page'] != '/'){
     height: max-content !important;
 }
 
-.content > .table > .tr > .td > .table > .tbody > .tr > .td > p {flex-grow: 1;}</style>`;
+.content > .table > .tr > .td > .table > .tbody > .tr > .td > p {flex-grow: 1;}
+
+.content > .table > .tr > .td > .table > .tbody > .tr > .td img {
+    margin: 0px !important;
+    margin-top: 16px !important;
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+</style>`;
 trytoget = trytoget.replaceAll('<td', '<div class="td"').replaceAll('<tr', '<div class="tr"').replaceAll('<tbody', '<div class="tbody"').replaceAll('<table', '<div class="table"').replaceAll('</tr', '</div').replaceAll('</td','</div').replaceAll('</table','</div').replaceAll('</tbody','</div');
 				}
 				if ($_GET['page'] == '/content/about.html'){
