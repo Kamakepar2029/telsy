@@ -181,8 +181,11 @@ if ($_GET['page'] && $_GET['page'] != '/'){
     border: 1px solid lightgray;
     padding: 10px;
 }
+.nonedisp {
+    height: 3px;
+}
 </style>`;
-trytoget = trytoget.replaceAll('<td', '<div class="td"').replaceAll('<tr', '<div class="tr"').replaceAll('<tbody', '<div class="tbody"').replaceAll('<table', '<div class="table"').replaceAll('</tr', '</div').replaceAll('</td','</div').replaceAll('</table','</div').replaceAll('</tbody','</div');
+trytoget = trytoget.replaceAll('<td', '<div class="td"').replaceAll('<tr', '<div class="tr"').replaceAll('<tbody', '<div class="tbody"').replaceAll('<table', '<div class="table"').replaceAll('</tr', '</div').replaceAll('</td','</div').replaceAll('</table','</div').replaceAll('</tbody','</div').replaceAll('class="MsoNormal">&nbsp;</p>', 'class="MsoNormal nonedisp">&nbsp;</p>');
 				}
 				if ($_GET['page'] == '/content/about.html'){
 					let tuio = `<style>.content > p > strong {
