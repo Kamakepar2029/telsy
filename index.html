@@ -138,38 +138,34 @@ if ($_GET['page'] && $_GET['page'] != '/'){
 					</style>`;
 				}
 				if ($_GET['page'] == '/catalog/Primeri-proektov/'){
-					trytoget+=`<style>.MsoTableGrid {
-    margin-bottom: 40px;
+					trytoget+=`<style>.content > .table > .tr > .td > .table {
+    width: 100% !important;
+    margin: 0px !important;
 }
 
-.MsoTableGrid td {
-    border: none !important;
-}
-
-.MsoTableGrid {
+.content > .table > .tr > .td > .table > .tbody {
     width: 100% !important;
 }
 
-.MsoTableGrid tbody tr {
+.content > .table > .tr > .td > .table > .tbody > .tr {
     display: flex;
-    overflow: auto;
-    border: 2px solid lightgray;
+    width: 100%;
     height: max-content !important;
-    width: 100% !important;
+    overflow: auto;
+    border: 1px solid lightgray;
+    margin-top: -1px;
 }
 
-.content > table > tbody > tr > td > .MsoNormal {
-    display: none;
+.content > .table > .tr > .td > .table > .tbody > .tr > .td {
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: max-content !important;
 }
 
-td .MsoNormal {
-    max-width: 125px !important;
-    width: 100% !important;
-}
-
-.MsoTableGrid > tbody > tr > td {
-    width: calc(100% - 100px) !important;
-}</style>`;
+.content > .table > .tr > .td > .table > .tbody > .tr > .td > p {flex-grow: 1;}</style>`;
+trytoget = trytoget.replaceAll('<td', '<div class="td"').replaceAll('<tr', '<div class="tr"').replaceAll('<tbody', '<div class="tbody"').replaceAll('<table', '<div class="table"').replaceAll('</tr', '</div').replaceAll('</td','</div').replaceAll('</table','</div').replaceAll('</tbody','</div');
 				}
 				if ($_GET['page'] == '/content/about.html'){
 					let tuio = `<style>.content > p > strong {
