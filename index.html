@@ -149,6 +149,11 @@ if ($_GET['page'] && $_GET['page'] != '/'){
     margin: 0px !important;
 }
 
+.content > .table > .tr > .td > .table > .tbody > .tr > .td > p {
+    margin-bottom: 0px !important;
+    line-height: 20px !important;
+}
+
 .content > .table > .tr > .td > .table > .tbody {
     width: 100% !important;
 }
@@ -157,7 +162,7 @@ if ($_GET['page'] && $_GET['page'] != '/'){
     display: flex;
     width: 100%;
     height: max-content !important;
-    overflow: auto;
+    overflow: hidden;
     border: 1px solid lightgray;
     margin-top: -1px;
     align-items: center;
@@ -177,11 +182,12 @@ if ($_GET['page'] && $_GET['page'] != '/'){
 
 .content > .table > .tr > .td > .table > .tbody > .tr > .td img {
     margin: 0px !important;
-    margin-top: 16px !important;
+    margin-top: 10px !important;
     border: 1px solid lightgray;
     padding: 10px;
-		border-radius:5px;
+    border-radius: 5px;
 }
+
 .nonedisp {
     height: 3px;
 }
