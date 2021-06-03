@@ -142,6 +142,30 @@ if ($_GET['page'] && $_GET['page'] != '/'){
     flex-grow: 1;
 }</style>`;
 				}
+				if ($_GET['page'].includes('/news/') && $_GET['page'] != '/news/'){
+					trytoget+=`<style>.menubtn {
+    border: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.menubtn > a {
+    color: inherit;
+}
+
+.menubtn > a:hover {
+    color: inherit;
+}
+
+.menubtn:hover {
+    background: #053f6c;
+    color: white;
+    cursor: pointer;
+}</style>`;
+					trytoget = trytoget.replaceAll('<p align="center">', '<p align="center" class="menubtn">');
+				}
 				if ($_GET['page'] == '/content/advantages.html'){
 					trytoget+=`<style>
 					.content > p > span {
