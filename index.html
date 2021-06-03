@@ -150,6 +150,44 @@ if ($_GET['page'] && $_GET['page'] != '/'){
 			}
 					</style>`;
 				}
+				if ($_GET['page'].includes('/news')){
+					trytoget+=`<style>.news_block {
+    border: 1px solid lightgray;
+    margin-bottom: 15px;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.news_block > p {
+    cursor: pointer;
+    border: 1px solid lightgray;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius:5px;
+    justify-content: center;
+    margin-top:12px;
+}
+
+.news_block > p > a {
+    color: inherit;
+}
+
+.news_block > p > a:hover {
+    color: inherit;
+}
+
+.news_block > p:hover {
+    background: #053f6c;
+    color: white;
+}
+
+.news_block:hover {
+    box-shadow: 0px 0px 8px 0px;
+    transform: translateY(-3px);
+}</style>`;
+					trytoget = trytoget.replaceAll('<h4 style="margin:4px;">', '<div class="news_block"><h4 style="margin:4px;">').replaceAll('</a></p><br>', '</a></p><br></div>');
+				}
 				if ($_GET['page'] == '/catalog/Primeri-proektov/'){
 					trytoget+=`<style>.content > .table > .tr > .td > .table {
     width: 100% !important;
