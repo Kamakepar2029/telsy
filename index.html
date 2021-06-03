@@ -30,6 +30,13 @@
     align-items: center;
     justify-content: center;
 }
+
+.SubcatTbl > tbody > tr > td > span > p > a {
+    margin-top: 10px !important;
+    display: block !important;
+    padding: 5px 21px;
+    border: 1px solid lightgray;
+}
 		</style>
 		<meta http-equiv="refresh" content="530">
 		<meta name="description" content="ООО СКБ ТЕЛСИ - системный интегратор, предоставляет своим клиентам полный спектр услуг по созданию комплексных систем диспетчерской связи, профессиональных систем вызова персонала (палатной сигнализации ) ,телефонной связи и систем безопасности для всех сфер деятельности.Наш большой опыт разработки систем вызова персонала и использование проверенных методик расчетов позволяет находить наиболее рациональные решения для Заказчиков и являются основополагающим фактором надежности наших проектов.">
@@ -188,11 +195,16 @@ if ($_GET['page'] && $_GET['page'] != '/'){
     border-radius: 5px;
 }
 
+.content > .table > .tr > .td > .table > .tbody > .tr > .td img:hover {
+    box-shadow: 0px 0px 3px -1px black;
+    transform: translate(0, 3px);
+}
+
 .nonedisp {
     height: 3px;
 }
 </style>`;
-trytoget = trytoget.replaceAll('<td', '<div class="td"').replaceAll('<tr', '<div class="tr"').replaceAll('<tbody', '<div class="tbody"').replaceAll('<table', '<div class="table"').replaceAll('</tr', '</div').replaceAll('</td','</div').replaceAll('</table','</div').replaceAll('</tbody','</div').replaceAll('class="MsoNormal">&nbsp;</p>', 'class="MsoNormal nonedisp">&nbsp;</p>');
+trytoget = trytoget.replaceAll('<td', '<div class="td"').replaceAll('<tr', '<div class="tr"').replaceAll('<tbody', '<div class="tbody"').replaceAll('<table', '<div class="table"').replaceAll('</tr', '</div').replaceAll('</td','</div').replaceAll('</table','</div').replaceAll('</tbody','</div').replaceAll('class="MsoNormal">&nbsp;</p>', 'class="MsoNormal nonedisp">&nbsp;</p>').replaceAll('target="_blank" rel="noopener">&nbsp;','target="_blank" rel="noopener">');
 				}
 				if ($_GET['page'] == '/content/about.html'){
 					let tuio = `<style>.content > p > strong {
